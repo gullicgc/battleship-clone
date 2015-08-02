@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<!--References:
+	Image sources:
+		http://www.hasbro.com/common/instruct/battleship.pdf 5-20-2014 (cropped and edited)
+		http://www.patriccolling.com/content//uploads/2012/12/indianocean1.jpg 5-22-2014 (cropped and recolored)
+	
+	Javascript:
+		http://www.datagenetics.com/blog/december32011/index.html 5-20-2014(AI advice and strategies)
+	
+	Rules: 
+		http://www.hasbro.com/common/instruct/battleship.pdf 5-20-2014
+-->
+<!-- Webpage is compatible with IE9+, Firefox, and Chrome -->
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>A4: Glen Gullickson - Battleship Clone</title>
+	<link type="text/css" href="css/battleship.css" rel="stylesheet">
+	<script type="text/javascript" src="js/BattleshipAI.js"></script>
+	<script type="text/javascript" src="js/Ship.js"></script>
+	<script type="text/javascript" src="js/Board.js"></script>
+    <script type="text/javascript" src="js/Battleship.js"></script>
+</head>
+
+<body>
+	<header id="mainHeader">
+		<noscript class="error">For full functionality of this site it is necessary to enable JavaScript.</noscript>
+		<h1 id="logo">Battleship Clone</h1>
+	</header>
+	<div id="contents">
+		<div id="options">
+			<p id="optionTitle">&lt;OPTIONS&gt;<p>
+			<form name="placeShip">
+			<label>Direction of ship: </label><br>
+			<input type="radio" name="direction" id="vertical" value="Vert" checked>
+			Vertical (down)<br>
+			<input type="radio" name="direction" id="horizontal" value="Horiz">
+			Horizontal (right)<br><br>
+			
+			<label>Type of ship: </label><br>
+			<input type="radio" name="shipType" id="carrier" value="car" checked>
+			Carrier (Size: 5, Count: <span id="carNum"></span>)<br>
+			<input type="radio" name="shipType" id="battleship" value="bat">
+			Battleship (Size: 4, Count: <span id="batNum"></span>)<br>
+			<input type="radio" name="shipType" id="cruiser" value="cru">
+			Cruiser (Size: 3, Count: <span id="cruNum"></span>)<br>
+			<input type="radio" name="shipType" id="submarine" value="sub">
+			Submarine (Size: 3, Count: <span id="subNum"></span>)<br>
+			<input type="radio" name="shipType" id="destroyer" value="des">
+			Destroyer (Size: 2, Count: <span id="desNum"></span>)<br>
+			</form>
+			<br><br>
+			<button type="button" id="randomBoard">Create random board</button>
+			<br><br>
+			<button type="button" id="resetBoard">Reset board</button>
+		</div>
+		<canvas id="canvas" width="450" height="425">Your browser does not support HTML5 Canvas.</canvas>
+	</div>
+	
+	<footer id="pageFooter">
+		<small id="copyright">&copy; 2014 Battleship Clone</small>
+		<address>
+		<a href="mailto:gcgullickson@gmail.com" title="contact page author" id="email">Email author</a>
+		</address>
+	</footer>
+</body>
+
+</html>
