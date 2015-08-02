@@ -1,0 +1,128 @@
+/* Custom server-side font */
+@font-face {
+    font-family: 'Airborne';
+    src: url('../Fonts/airborne-webfont.eot');
+    src: url('../Fonts/airborne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/airborne-webfont.woff') format('woff'),
+         url('../Fonts/airborne-webfont.ttf') format('truetype'),
+         url('../Fonts/airborne-webfont.svg#airborneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use imported font and prevent page reorganization on resize */
+body {
+	font-family: 'Airborne', sans-serif;
+	background: rgb(180,180,180);
+	clear: both;
+	min-width: 765px;
+}
+
+#logo {
+	font-size: 36px;
+	font-weight: bold;
+	margin-left: 150px;
+	line-height: 1em;
+	color: rgb(148,148,148);
+	
+	/* Create 3D effect by stacking shadows. */
+	text-shadow:0px 0px 0 rgb(107,107,107),1px 1px 0 rgb(74,74,74),2px 2px 0 rgb(41,41,41), 3px 3px 0 rgb(8,8,8),4px 4px 3px rgba(0,0,0,0.4),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);
+}
+
+#options {
+	float: left;
+	font-size: 15px;
+}
+
+#optionTitle {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+label {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/* Change cursor image to pointer when over an input element. */
+input {
+	cursor: pointer;
+}
+
+/* Defines style for both buttons. */
+#resetBoard, #randomBoard {	
+	padding-top: 3px;
+	padding-bottom: 3px;
+    border: 1px solid rgb(73,73,73);
+    border-radius: 7px;
+    color: rgb(73,73,73);
+    cursor: pointer;
+    font-family: 'Airborne', 'Lucida Grande', sans-serif;
+    font-size: 15px;
+	
+	/* Apply gradient to buttons. */
+	background: -moz-linear-gradient(top,  rgba(148,148,148,0) 0%, rgba(130,130,130,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(148,148,148,0)), color-stop(100%,rgba(130,130,130,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(148,148,148,0) 0%,rgba(130,130,130,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(148,148,148,0) 0%,rgba(130,130,130,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(148,148,148,0) 0%,rgba(130,130,130,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(148,148,148,0) 0%,rgba(130,130,130,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00949494', endColorstr='#828282',GradientType=0 ); /* IE6-9 */
+}
+
+/* Defines style for both button's hover state. */
+#resetBoard:hover, #randomBoard:hover {
+	/* Apply reversed gradient to buttons. */
+	background: -moz-linear-gradient(top,  rgba(130,130,130,1) 0%, rgba(148,148,148,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(130,130,130,1)), color-stop(100%,rgba(148,148,148,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(130,130,130,1) 0%,rgba(148,148,148,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(130,130,130,1) 0%,rgba(148,148,148,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(130,130,130,1) 0%,rgba(148,148,148,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(130,130,130,1) 0%,rgba(148,148,148,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282', endColorstr='#00949494',GradientType=0 ); /* IE6-9 */
+}
+
+/* Specify random board button's size. */
+#randomBoard {
+	height: 41px;
+    width: 140px;
+	margin-left: 30px;
+}
+
+/* Specify random board button's disabled state. */
+#randomBoard[disabled], #randomBoard[disabled]:hover {
+	border: 1px solid rgb(130,130,130);
+	background: rgb(170,170,170);
+	color: rgb(130,130,130);
+	cursor: default;
+}
+
+/* Specify reset board button's size. */
+#resetBoard {
+	height: 41px;
+    width: 85px;
+	margin-left: 55px;
+}
+
+/* Canvas is styled and fixed to be to the right of the options */
+#canvas {
+	position:absolute; 
+	top:85px; 
+	left:270px;
+	
+	/* Custom crosshair cursor. */
+	cursor: url('../Cursor/cursor.cur'), crosshair !important;
+	border: 1px solid black;
+	border-radius: 15px;
+	background-image: url('../Images/metalBackground2.png');
+}
+
+#pageFooter {
+	font-size: 13px;
+	padding-top: 2em;
+	clear: both;
+}
+
+#email {
+	font-size: 12px;
+}
